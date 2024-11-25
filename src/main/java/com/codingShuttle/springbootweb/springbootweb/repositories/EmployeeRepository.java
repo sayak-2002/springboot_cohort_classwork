@@ -1,2 +1,11 @@
-package com.codingShuttle.springbootweb.springbootweb.repositories;public class EmployeeRepository {
+package com.codingShuttle.springbootweb.springbootweb.repositories;
+
+import com.codingShuttle.springbootweb.springbootweb.entities.EmployeeEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+
+@Repository
+public interface EmployeeRepository extends JpaRepository<EmployeeEntity, Long> {
+
 }
