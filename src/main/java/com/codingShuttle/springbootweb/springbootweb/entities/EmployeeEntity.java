@@ -10,10 +10,12 @@ import lombok.Setter;
 import java.time.LocalDate;
 
 @Entity  // It will tell the spring data JPA, to convert this class into table inside the database
+
+// lombok dependency handles all getter and setter methods and constructor
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
+@AllArgsConstructor   // generates a constructor with all the parameters as arguments
+@NoArgsConstructor    // generates a constructor with no parameters
 @Table(name = "employees")
 public class EmployeeEntity {
 

@@ -2,6 +2,7 @@ package com.codingShuttle.springbootweb.springbootweb.dto;
 
 import java.time.LocalDate;
 
+
 public class EmployeeDTO {
 
     private Long id;
@@ -58,10 +59,6 @@ public class EmployeeDTO {
 
     public LocalDate getDateOfJoining() {
         return dateOfJoining;
-    }
-
-    public void setDateOfJoining(LocalDate dateOfJoining) {
-        this.dateOfJoining = dateOfJoining;
     }
 
     public Boolean getActive() {
