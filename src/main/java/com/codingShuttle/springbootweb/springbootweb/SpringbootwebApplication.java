@@ -8,9 +8,6 @@ import org.springframework.stereotype.Component;
 public class SpringbootwebApplication {
 
 	public static void main(String[] args) {
-
 		SpringApplication.run(SpringbootwebApplication.class, args);
-
 	}
-
 }
