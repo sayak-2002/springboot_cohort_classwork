@@ -1,15 +1,13 @@
 package com.codihngshuttle.jpaLesson.jpaLessons;
 
-import com.codihngshuttle.jpaLesson.jpaLessons.entitites.ProductEntity;
+import com.codihngshuttle.jpaLesson.jpaLessons.entities.ProductEntity;
 import com.codihngshuttle.jpaLesson.jpaLessons.repositories.ProductRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.math.BigDecimal;
 import java.util.List;
-import lombok.*;
 
 @SpringBootTest
 class JpaLessonsApplicationTests {
@@ -17,7 +15,6 @@ class JpaLessonsApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 
 	@Autowired
 	ProductRepository productRepository;

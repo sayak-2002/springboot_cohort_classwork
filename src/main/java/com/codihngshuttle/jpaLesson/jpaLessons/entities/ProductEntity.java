@@ -1,4 +1,4 @@
-package com.codihngshuttle.jpaLesson.jpaLessons.entitites;
+package com.codihngshuttle.jpaLesson.jpaLessons.entities;
 
 import jakarta.persistence.*;
 import lombok.*;

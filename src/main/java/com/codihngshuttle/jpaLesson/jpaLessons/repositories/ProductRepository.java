@@ -1,6 +1,6 @@
 package com.codihngshuttle.jpaLesson.jpaLessons.repositories;
 
-import com.codihngshuttle.jpaLesson.jpaLessons.entitites.ProductEntity;
+import com.codihngshuttle.jpaLesson.jpaLessons.entities.ProductEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
