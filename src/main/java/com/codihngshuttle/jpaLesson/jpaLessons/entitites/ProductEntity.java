@@ -1,6 +1,5 @@
 package com.codihngshuttle.jpaLesson.jpaLessons.entitites;
 
-import com.sun.source.doctree.EscapeTree;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
@@ -23,8 +22,8 @@ import java.time.LocalDateTime;
                 @Index(name = "sku_index", columnList = "sku")
         }
 )
-public class Product {
 
+public class ProductEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -44,4 +43,5 @@ public class Product {
 
     @UpdateTimestamp
     private LocalDateTime updatedAt;
+
 }

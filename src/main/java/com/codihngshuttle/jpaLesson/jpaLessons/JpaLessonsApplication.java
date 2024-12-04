@@ -10,5 +10,4 @@ public class JpaLessonsApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(JpaLessonsApplication.class, args);
 	}
-
 }
