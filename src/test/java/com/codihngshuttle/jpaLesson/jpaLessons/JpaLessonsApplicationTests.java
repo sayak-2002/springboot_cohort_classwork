@@ -44,7 +44,7 @@ class JpaLessonsApplicationTests {
 //		List<ProductEntity> entities = productRepository.findByQuantityGreaterThanAndPriceLessThan(1, BigDecimal.valueOf(130.4));
 //		System.out.println(entities);
 
-		List<ProductEntity> entities = productRepository.findByTitleContainingIgnoreCase("CHOco");
+		List<ProductEntity> entities = productRepository.findByTitleContainingIgnoreCase("CHOco", null);
 		System.out.println(entities);
 	}
 

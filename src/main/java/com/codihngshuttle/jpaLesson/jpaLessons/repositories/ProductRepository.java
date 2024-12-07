@@ -1,6 +1,9 @@
 package com.codihngshuttle.jpaLesson.jpaLessons.repositories;
 
 import com.codihngshuttle.jpaLesson.jpaLessons.entities.ProductEntity;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -13,17 +16,21 @@ import java.util.Optional;
 
 @Repository
 public interface ProductRepository extends JpaRepository<ProductEntity, Long> {
+
+    List<ProductEntity> findBy(Sort sort);
+    List<ProductEntity> findByOrderByPrice();
     List<ProductEntity> findByTitle(String title);
     List<ProductEntity> findByCreatedAtAfter(LocalDateTime after);
     List<ProductEntity> findByQuantityAndPrice(int quantity, BigDecimal price);
     List<ProductEntity> findByQuantityGreaterThanAndPriceLessThan(int quantity, BigDecimal price);
     List<ProductEntity> findByQuantityGreaterThanOrPriceLessThan(int quantity, BigDecimal price);
     List<ProductEntity> findByTitleLike(String title);
-    List<ProductEntity> findByTitleContainingIgnoreCase(String title);
+    List<ProductEntity> findByTitleContainingIgnoreCase(String title, Pageable pageable);
 
     // Use Optional if the output will be only one element else use List.
 //    Optional<ProductEntity> findByTitleAndPrice(String title, BigDecimal price);
 
     @Query("select e from ProductEntity e where e.title=:title and e.price=:price")
     Optional<ProductEntity> findByTitleAndPrice(String title, BigDecimal price);
+
 }
